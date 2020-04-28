@@ -12,7 +12,7 @@ odoo.define("web_disable_export_group", function(require) {
     Sidebar.include({
         _addItems: function (sectionCode, items) {
             var _items = items;
-            if (!session.is_superuser && sectionCode === 'other' && items.length && !session.group_export_data) {
+            if (!session.is_superuser && sectionCode === 'other' && items.length && !session.group_export_data && session.group_export_data !== undefined) {
                 _items = _.reject(_items, {label:_t("Export")});
             }
             this._super(sectionCode, _items);
