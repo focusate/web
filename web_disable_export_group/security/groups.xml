@@ -8,4 +8,9 @@
         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
     </record>
 
+    <record id="export_group_toggle" model="res.groups">
+        <field name="name">Enable Export Hide option</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
 </odoo>

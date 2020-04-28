@@ -1,1 +1,1 @@
-from . import ir_http
+from . import ir_http, res_config_settings
